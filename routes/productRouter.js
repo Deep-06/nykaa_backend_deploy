@@ -15,7 +15,7 @@ productRouter.post("/products",  async (req, res) => {
     }
 })
 
-productRouter.get("/products", auth, async (req, res) => {
+productRouter.get("/products", async (req, res) => {
     try {
         const product = await ProductModel.find()
         res.status(200).send(product)
