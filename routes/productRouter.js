@@ -4,7 +4,7 @@ const express = require('express');
 
 const productRouter = express.Router()
 
-productRouter.post("/products",  async (req, res) => {
+productRouter.post("/add",  async (req, res) => {
     try {
         const product = new ProductModel(req.body)
         await product.save()
