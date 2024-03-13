@@ -1,9 +1,9 @@
 const mongoose=require('mongoose');
-require('dotenv').config();
 
-const mongoURI = process.env.mongoURL;
 
-const connection=mongoose.connect(mongoURI).then(()=>{
+//const mongoURI = process.env.mongoURL;
+
+const connection=mongoose.connect(process.env.mongoURL).then(()=>{
     console.log('connected')
 }).catch((err)=>{
 console.log(err)
